@@ -1,5 +1,4 @@
-import gobject
-import dbus
+from gi.repository import GObject as gobjectimport dbus
 import dbus.service
 import dbus.mainloop.glib
 
@@ -55,7 +54,7 @@ class SignalCallback(BluetoothBase):
     def process_interface(self, signal, interfaces, path):
 
         if signal == BTSignals.SIGNAL_ADD_INTERFACE:
-            for interface, props in interfaces.iteritems():
+            for interface, props in interfaces.items():
                 if all((self.check_ignored(interface),
                         self.check_interface(0,interface))):
 
