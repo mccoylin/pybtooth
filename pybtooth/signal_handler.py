@@ -1,4 +1,6 @@
-from gi.repository import GObject as gobjectimport dbus
+from gi.repository import GObject as gobject
+
+import dbus
 import dbus.service
 import dbus.mainloop.glib
 
