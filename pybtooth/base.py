@@ -19,7 +19,7 @@ class BluetoothBase(object):
     def _findInterface(self, interface):
         paths = []
         objects = self._getManagedObjects()
-        for path, ifaces in objects.iteritems():
+        for path, ifaces in objects.items():
             device = ifaces.get(interface)
             if device is None:
                 continue
